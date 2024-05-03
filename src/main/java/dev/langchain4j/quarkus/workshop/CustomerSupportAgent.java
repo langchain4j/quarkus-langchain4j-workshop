@@ -6,7 +6,7 @@ import io.smallrye.mutiny.Multi;
 import jakarta.enterprise.context.SessionScoped;
 
 @SessionScoped
-@RegisterAiService
+@RegisterAiService(tools = BookingTools.class)
 public interface CustomerSupportAgent {
 
     @SystemMessage("You are a customer support agent of a car rental company named 'Miles of Smiles'.")
